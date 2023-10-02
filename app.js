@@ -77,8 +77,6 @@ app.post('/login', async (req, res) => {
   return res.status(401).send('User not found or invalid password.');
 });
 
-
-
 // Protected Route
 app.get('/protected', authenticateToken, (req, res) => {
   res.json({ message: 'Protected route accessed successfully!' });
